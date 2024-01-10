@@ -1,16 +1,37 @@
+<!DOCTYPE html>
 <html lang="fr">
 
 <head>
     <meta charset="utf-8" />
-    <title>Bio-brao</title>
+    <title>A propos</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xzoom@1.0.15/dist/xzoom.min.css">
 
     <link href="/styles.css" rel="stylesheet">
+    <style>
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+
+.dropdown>.dropdown-toggle:active {
+  /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+}
+    </style>
 </head>
 
 <body>
-
+    <!--[if IE]>
+<div class="p-3 bg-light">
+  <div class="container">
+    <p class="mb-0 browserupgrade">
+      You are using an <strong>outdated</strong> browser.
+      Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.
+    </p>
+  </div>
+</div>
+<![endif]-->
 
 
     <main>
@@ -35,21 +56,22 @@
                             <a class='nav-link text-dark' href='/about.html'>A propos </a>
                         </li>
                         <li class="nav-item p-2 dropdown">
-                          <a class='nav-link text-dark dropdown-toggle'  type="button"
-                          id="dropdownMenuButton" href='/archive.html'>Nos produits</a>
-                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <li><a class="dropdown-item" href="/archive.html">compléments alimentaires</a></li>
-                            <li><a class="dropdown-item" href="/archive.html">Medicaments</a></li>
-                          
-                          </ul>
-  
-                      </li>
+                            <a class='nav-link text-dark dropdown-toggle'  type="button"
+                            id="dropdownMenuButton" href='/archive.html'>Nos produits</a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <li><a class="dropdown-item" href="/archive.html">compléments alimentaires</a></li>
+                              <li><a class="dropdown-item" href="/archive.html">Medicaments</a></li>
+                            
+                            </ul>
+    
+                        </li>
+                       
                         <li class="nav-item p-2">
                             <a class='nav-link text-dark' href='/contact.html'>Contactez-nous</a>
                         </li>
                     </ul>
                     <div class="mx-1">
-                        <a class="btn btn-light " type="button" href="/checkout.html"
+                        <a class="btn btn-light " type="button" id="dropdownMenuButton" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
                             <i class="fal fa-shopping-cart fa-2x"></i> </a>
 
@@ -106,7 +128,7 @@
                     <small>Accueil</small>
                 </a>
                 <a class='d-inline-flex flex-column align-items-center text-dark text-capitalize text-decoration-none'
-                    href='/about'>
+                    href='/about.html'>
                     <i class="fal fa-info-square"></i>
                     <small>a propos</small>
                 </a>
@@ -115,8 +137,10 @@
                     class="d-inline-flex flex-column align-items-center text-dark text-capitalize text-decoration-none">
                     <i class="fal fa-shopping-basket"></i>
                     <small>nos produits</small>
+
+                  
                 </a>
-                <a href="#"
+                <a href="/contact.html"
                     class="d-inline-flex flex-column align-items-center text-dark text-capitalize text-decoration-none">
                     <i class="fal fa-paper-plane"></i>
                     <small>Contact</small>
@@ -125,170 +149,159 @@
 
             <div class="body-overlay fixed-top h-100 w-100"></div>
         </header>
+        <section class="hero-mini position-relative">
+          <div class="container h-100">
+              <div class="hero-mini__content h-100 d-flex align-items-center justify-content-center">
+                  <div>
+                      <div class="position-relative">
+                          <h1 class="hero-mini__heading text-dark">
+                              Détails produit
+                          </h1>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
 
-        <div id="main-slider">
-            <div style="
-            background-image: url('images/couverture.png');
-          "
-                class="slide position-relative">
-                <div class="container">
-                    <div class="slide__content">
-                        <div>
-                            <div class="card card-body shadow-lg bg-warning">
-                                <h2 data-animation-in="fadeIn">
-                                    <i class="fal fa-leaf text-success"></i> Bio Brao, on ne croit qu'a la nature.
-                                </h2>
-                                <p class="lead my-4" data-animation-in="fadeInUp">
-                                    Découvrez notre sélection de compléments alimentaires conçus pour booster votre
-                                    fertilité et renforcer votre santé
-                                </p>
-                                <a href="#" data-animation-in="fadeInUp"
-                                    class="btn btn-primary text-uppercase align-self-md-start">
-                                    Voir plus <i class="fal ml-2 fa-paper-plane"></i>
-                                </a>
-                            </div>
-                        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            <i class="fal fa-shopping-cart"></i> Commandez le produit lorem
+                            impsum
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
-                </div>
-            </div>
-            <div style="
-            background-image: url('images/slide2.jpg');
-          "
-                class="slide position-relative">
-                <div class="container">
-                    <div class="slide__content">
-                        <div>
-                            <div class="card card-body shadow-lg bg-warning">
-                                <h2 data-animation-in="fadeIn">
-                                    <i class="fal fa-leaf text-success"></i> Lorem ipsum dolor
-                                    sit.
-                                </h2>
-                                <p class="lead my-4" data-animation-in="fadeInUp">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Laborum sint molestias, rem sunt amet molestiae.
-                                </p>
-                                <a href="#" data-animation-in="fadeInUp"
-                                    class="btn btn-primary text-uppercase align-self-md-start">
-                                    contact us <i class="fal ml-2 fa-paper-plane"></i>
-                                </a>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="username">Le Nom Complét</label>
+                                <input type="text" class="form-control" id="username"
+                                    aria-describedby="emailHelp" placeholder="Enter email" />
                             </div>
-                        </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Enter votre Email ..." />
+                                <small id="emailHelp" class="form-text text-muted">
+                                    Nous ne partagerons jamais votre e-mail avec quelqu'un
+                                    d'autre..</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Téléphone</label>
+                                <input type="text" class="form-control" id="phone" placeholder="Téléphone" />
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">
+                                ENVOYER <i class="fal fa-paper-plane"></i>
+                            </button>
+                        </form>
                     </div>
+                    <div class="modal-footer"></div>
                 </div>
             </div>
         </div>
-
-        <!--PRODUCTS START-->
-        <section class="products-section py-5 position-relative">
-            <img src="images/mint.png" class="position-absolute" alt="" />
-
+        <!--PRODUCT START-->
+        <section class="product py-5">
             <div class="container">
-                <h2 class="text-center mb-5 heading">
-                    <i class="fal fa-leaf"></i> Nos Produits
-                </h2>
+                <div class="row equal">
 
-                <div class="row mb-5">
-                    <div class="col-md-4">
-                        <div style="
-                  background-image: url('images/zinc.png');
-                "
-                            class="border rounded bg-white product-card wow fadeIn mb-5 mb-md-0 position-relative"
-                            data-wow-delay="0.5s">
-                            <div class="card card-body m-3 shadow-lg " style="background-color:#ce4d3c ;">
-                                <h4 class="heading text-center" style="color: white !important">
-                                    Zinc +
-                                </h4>
-                            </div>
+                    <div class="col-md-6 xzoom-container ">
+                        <img class="img-fluid rounded rounded-lg xzoom" id="main-image" src="images/fertilia.jpg"
+                            alt="image de produit" />
+                        <!-- Thumbnails -->
+                        <div style="margin-top: 5px;">
 
-                            <a class='btn btn-primary text-uppercase product-card__btn position-absolute'
-                                href='/product'>
-                                voir <i class="fal fa-chevron-circle-right ml-2"></i>
+
+                            <a href="/images/fertilia.jpg">
+                                <img class="xzoom-gallery" width="80" src="/images/fertilia.jpg">
                             </a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div style="
-                  background-image: url('images/oil.png');
-                "
-                            class="border rounded bg-white product-card wow fadeIn mb-5 mb-md-0 position-relative"
-                            data-wow-delay="0.9s">
-                            <div class="card card-body m-3 shadow-lg " style="background-color:#ce4d3c ;">
-                                <h4 class="heading text-center" style="color: white !important">
-                                    Castor Oil
-                                </h4>
-                            </div>
 
-                            <a class='btn btn-primary text-uppercase product-card__btn position-absolute'
-                                href='/product'>
-                                voir <i class="fal fa-chevron-circle-right ml-2"></i>
+                            <a href="/images/fertiliamtl.jpg">
+                                <img class="xzoom-gallery" width="80" src="/images/fertiliamtl.jpg">
                             </a>
+
+
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div style="
-                  background-image: url('images/hembrao.png');
-                "
-                            class="border rounded bg-white product-card wow fadeIn mb-5 mb-md-0 position-relative"
-                            data-wow-delay="1.2s">
-                            <div class="card card-body m-3 shadow-lg " style="background-color:#ce4d3c ;">
-                                <h4 class="heading text-center" style="color: white !important">
-                                    Hemobrao
-                                </h4>
-                            </div>
 
-                            <a class='btn btn-primary text-uppercase product-card__btn position-absolute'
-                                href='/product'>
-                                voir <i class="fal fa-chevron-circle-right ml-2"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="text-center mt-5">
-                    <a class='text-uppercase font-weight-bold btn btn-outline-primary' href='/archive.html'>Voir tous
-                        les produits <i class="fal fa-chevron-right ml-2"></i></a>
-                </div>
-            </div>
-            <!-- <img
-          class="products-section__rose"
-          src="images/rose-23.png"
-          class="position-absolute"
-          alt=""
-        /> -->
-        </section>
-        <!--PRODUCTS END-->
-
-        <!--ABOUT START-->
-
-        <section class="about-section py-5">
-            <div class="container px-0 rounded-lg overflow-hidden">
-                <div class="row no-gutters h-100 equal">
-                    <div class="col-md-6 py-5">
-                        <div class="h-100 d-flex flex-column p-5 justify-content-center">
-                            <h2><i class="fal fa-leaf"></i>A propos de bio brao</h2>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                Debitis dolor perferendis consequatur illum sit nisi esse
-                                neque sapiente rerum harum?
-                            </p>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-                                dolore eligendi officia distinctio beatae voluptate?
-                            </p>
-                            <a href="#" class="btn btn-primary text-uppercase align-self-md-start">
-                                Lire plus <i class="fal ml-2 fa-info-circle"></i>
-                            </a>
-                        </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="about-section__image h-100"></div>
+                        <h1>Castor oil</h1>
+                        <hr />
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Asperiores labore praesentium rerum, laborum repudiandae magni
+                            non eligendi possimus dolor corporis. Accusantium cumque
+                            recusandae debitis beatae, qui sint impedit doloremque
+                            consequatur.
+                        </p>
+                        <ul>
+                            <li>Lorem, ipsum.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit</li>
+                        </ul>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">+</span>
+                            <input type="text" class="form-control" value="1">
+                            <span class="input-group-text">-</span>
+                        </div>
+
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#exampleModal">
+                            Ajouter au panier <i class="fal ml-2 fa-shopping-basket"></i>
+                        </button>
+                        <hr />
+                        <div class="row equal">
+                            <div class="col-4">
+                                <div
+                                    class="bg-white border h-100 d-flex justify-content-center align-items-center rounded text-center">
+                                    <img src="images/bio-cert.png" class="w-25" alt="" />
+                                </div>
+                            </div>
+
+                            <div class="col-4">
+                                <div
+                                    class="bg-white border h-100 d-flex justify-content-center align-items-center rounded text-center">
+                                    <img src="images/ger-for.png" class="w-25" alt="" />
+                                </div>
+                            </div>
+
+                            <div class="col-4">
+                                <div
+                                    class="bg-white border h-100 d-flex justify-content-center align-items-center rounded text-center">
+                                    <img src="images/labo-logo-8.png" class="w-75" alt="" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-right d-flex align-items-center mt-5">
+                            <span class="mr-2">Partager sur : </span>
+                            <div class="d-flex">
+                                <a href="#" target="_blank"
+                                    class="mx-1 border border-primary text-decoration-none rounded-lg shadow social-media-bullet d-flex align-items-center justify-content-center bg-white">
+                                    <i class="fab fa-facebook-f text-primary"></i>
+                                </a>
+                                <a href="#" target="_blank"
+                                    class="mx-1 border border-primary text-decoration-none rounded-lg shadow social-media-bullet d-flex align-items-center justify-content-center bg-white">
+                                    <i class="fab fa-twitter text-primary"></i>
+                                </a>
+                                <a href="#" target="_blank"
+                                    class="mx-1 border border-primary text-decoration-none rounded-lg shadow social-media-bullet d-flex align-items-center justify-content-center bg-white">
+                                    <i class="fab fa-instagram text-primary"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!--ABOUT END-->
-
-
+        <!--PRODUCT  END-->
 
         <!--CTA END-->
         <section class="cta py-5">
@@ -298,7 +311,7 @@
                     <div class="col-md-8">
                         <div class="text-center">
                             <div class="mb-4">
-                                <div class="card card-body wow fadeInUp">
+                                <div class="card card-body">
                                     <h4>Contactez-nous maintenant</h4>
                                     <p>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -393,7 +406,15 @@
 
     <!-- End -->
 
+
     <script type="text/javascript" src="/index.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xzoom@1.0.15/dist/xzoom.min.js"></script>
+    <script>
+        $(".xzoom, .xzoom-gallery").xzoom({
+
+
+        });
+    </script>
 </body>
 
 </html>

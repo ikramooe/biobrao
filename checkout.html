@@ -1,26 +1,65 @@
-<!DOCTYPE html>
 <html lang="fr">
 
 <head>
     <meta charset="utf-8" />
-    <title>A propos</title>
+    <title>Bio-brao</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link href="/styles.css" rel="stylesheet">
+    <style>
+        .card-cart {
+            width: 90%;
+            box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border-radius: 1rem;
+            border: transparent;
+        }
+
+        .card {
+            overflow: hidden;
+        }
+
+        .m-auto {
+            margin: auto !important;
+        }
+
+        .card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            word-wrap: break-word;
+            background-color: #fff;
+            background-clip: border-box;
+            border: 1px solid rgba(7, 7, 7, 0.125);
+            border-radius: 0.25rem;
+        }
+
+        .cart-checkout {
+            background-color: #fff;
+            padding: 4vh 5vh;
+            border-bottom-left-radius: 1rem;
+            border-top-left-radius: 1rem;
+        }
+
+        .main-cart {
+            margin: 0;
+            padding: 2vh 0;
+            width: 100%;
+        }
+
+        .summary {
+            background-color: #ddd;
+            border-top-right-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+            padding: 4vh;
+            color: #414141;
+        }
+    </style>
 </head>
 
 <body>
-    <!--[if IE]>
-<div class="p-3 bg-light">
-  <div class="container">
-    <p class="mb-0 browserupgrade">
-      You are using an <strong>outdated</strong> browser.
-      Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.
-    </p>
-  </div>
-</div>
-<![endif]-->
+
 
 
     <main>
@@ -137,14 +176,13 @@
     </header>
 
 
-
         <section class="hero-mini position-relative">
             <div class="container h-100">
                 <div class="hero-mini__content h-100 d-flex align-items-center justify-content-center">
                     <div>
                         <div class="position-relative">
                             <h1 class="hero-mini__heading text-dark">
-                                Contactez-Nous
+                                Facturation
                             </h1>
                         </div>
                     </div>
@@ -152,120 +190,168 @@
             </div>
         </section>
 
-        <!--Contact Cards Start-->
-        <section class="contacts py-5">
+
+
+        <!--PRODUCTS START-->
+
+        <!--PRODUCTS END-->
+
+        <!--ABOUT START-->
+        <section class="py-5">
+            <div class="card m-auto  card-cart">
+                <div class="row m-0">
+                    <div class="col-md-8 cart-checkout">
+                        <div class="title-cart">
+                            <div class="row">
+                                <div class="col">
+                                    <h4><b>Panier</b></h4>
+                                </div>
+                                <div class="col align-self-center text-right text-muted font-weight-bold"
+                                    style="font-size: 13px;">3 Produits</div>
+                            </div>
+                        </div>
+                        <div class="row border-top border-bottom">
+                            <div class="row main-cart align-items-center">
+                                <div class="col-2"><img class="img-fluid img-cart" src="/images/zinc.png"
+                                        style="height: 100px;width:100px;"></div>
+                                <div class="col">
+                                    <div class="row text-muted font-weight-bold">compléments alimentaires</div>
+                                    <div class="row font-weight-bold">Zinc +</div>
+                                </div>
+                                <div class="col">
+                                    <div class="red mx-auto"></div>
+                                </div>
+                                <div class="col font-weight-bold"><a href="#" class="ml-4">1</a></div>
+                                <div class="col font-weight-bold">€ 44.00 <span class="close ml-auto">✕</span></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="row main-cart align-items-center">
+                                <div class="col-2"><img class="img-fluid img-cart" src="/images/hembrao.png"
+                                        style="height: 100px;width:100px;"></div>
+                                <div class="col">
+                                    <div class="row text-muted font-weight-bold">Médicaments</div>
+                                    <div class="row font-weight-bold">Hembrobrao</div>
+                                </div>
+                                <div class="col">
+                                    <div class="black mx-auto"></div>
+                                </div>
+                                <div class="col font-weight-bold"><a href="#" class="ml-4">1</a> </div>
+                                <div class="col font-weight-bold">€ 44.00 <span class="close ml-auto mt-2">✕</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row border-top border-bottom">
+                            <div class="row main-cart align-items-center">
+                                <div class="col-2"><img class="img-fluid img-cart mx-auto" src="/images/oil.png"
+                                        style="height: 100px;width:100px;"></div>
+                                <div class="col">
+                                    <div class="row text-muted font-weight-bold">Huiles</div>
+                                    <div class="row font-weight-bold">Castor oil</div>
+                                </div>
+                                <div class="col">
+                                    <div class="yellow mx-auto"></div>
+                                </div>
+                                <div class="col font-weight-bold"><a href="#" class="ml-4">1</a></div>
+                                <div class="col font-weight-bold">€ 44.00 <span class="close ml-auto mt-2">✕</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="back-to-shop" style="margin-top: 2rem;"><a href="/archive.html">← <span
+                                    class="text-muted font-weight-bold" style="font-size: 13px;">Voir les
+                                    produits</span></a></div>
+                    </div>
+                    <div class="col-md-4 summary">
+                        <div>
+                            <h5><b>Informations de livraison </b></h5>
+                        </div>
+                        <hr>
+
+                        <form class="form-cart">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Nom</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Prénom</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Téléphone</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Wilaya</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Commune</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Adresse</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+
+                            </div>
+
+
+
+                        </form>
+                        <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
+                            <div class="col font-weight-bold">Total </div>
+                            <div class="col text-right font-weight-bold">€ 137.00</div>
+                        </div> <button class="btn btn-primary mt-5 col-12">Valider</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--ABOUT END-->
+
+
+
+        <!--CTA END-->
+
+        <section class="cta py-5">
             <div class="container">
-                <div class="row equal">
-                    <div class="col-md-4">
-                        <div class="card card-body p-5 position-relative contact-card">
-                            <div
-                                class="contact-card__icon p-3 bg-primary position-absolute text-white border rounded rounded-circle d-flex justify-content-center align-items-center">
-                                <i class="fal fa-map-marked fa-2x fa-fw"></i>
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <div class="text-center">
+                            <div class="mb-4">
+                                <div class="card card-body wow fadeInUp">
+                                    <h4>Contactez-nous maintenant</h4>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Animi, incidunt eveniet praesentium perspiciatis nisi
+                                        eligendi.
+                                    </p>
+                                </div>
                             </div>
-                            <div class="contact-card__text text-center mt-5">
-                                <h5 class="mb-5 contact-card__heading">ADRESSE</h5>
-                                <p>
-                                    Lorem ipsum dolor sit, amet consectetur
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card card-body p-5 position-relative contact-card">
-                            <div
-                                class="contact-card__icon p-3 bg-primary position-absolute text-white border rounded rounded-circle d-flex justify-content-center align-items-center">
-                                <i class="fal fa-phone-alt fa-2x fa-fw"></i>
-                            </div>
-                            <div class="contact-card__text text-center mt-5">
-                                <h5 class="mb-5 contact-card__heading">PHONE</h5>
-                                <p>
-                                    00213 475 474 141
-                                </p>
+                            <div>
+                                <a href="#" class="btn btn-primary text-uppercase align-self-md-start">
+                                    contactez-nous <i class="fal ml-2 fa-paper-plane"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card card-body p-5 position-relative contact-card">
-                            <div
-                                class="contact-card__icon p-3 bg-primary position-absolute text-white border rounded rounded-circle d-flex justify-content-center align-items-center">
-                                <i class="fal fa-envelope fa-2x fa-fw"></i>
-                            </div>
-                            <div class="contact-card__text text-center mt-5">
-                                <h5 class="mb-5 contact-card__heading">EMAIL</h5>
-                                <p>
-                                    contact@orcloud.dz
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="col-md-2"></div>
                 </div>
             </div>
         </section>
-        <!--Contact Cards End-->
-
-        <!--Contact Form Start-->
-        <section class="contact-form p-0">
-            <div class="row equal">
-                <div class="col-md-6 d-none d-md-block">
-                    <div class="h-100 text-center px-5 bg-success-2 py-5">
-                        <div class="contact-form__img bg-primary rounded-circle mx-auto overflow-hidden">
-                            <img class="img-cover" src="images/page contactez nous.jpg" alt="" />
-                        </div>
-                        <h3 class="my-5 h1">Lorem ipsum dolor sit.</h3>
-                        <p class="lead">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Laudantium suscipit fugit magnam neque explicabo omnis at
-                            expedita consectetur ut repellendus quae facilis tenetur,
-                            provident sed quam non delectus repellat. Consequatur ex culpa
-                            odio beatae sapiente accusamus quas error ducimus vel?
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="h-100 d-flex align-items-center justify-content-center">
-                        <div class="p-5">
-                            <h4 class="display-4 mb-5">Get In Touch</h4>
-                            <form>
-                                <div class="form-group">
-                                    <label for="username">Le Nom Complét</label>
-                                    <input type="text" class="form-control" id="username"
-                                        aria-describedby="emailHelp" placeholder="Enter email" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Email</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" placeholder="Enter votre Email ..." />
-                                    <small id="emailHelp" class="form-text text-muted">
-                                        Nous ne partagerons jamais votre e-mail avec quelqu'un
-                                        d'autre..</small>
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone">Téléphone</label>
-                                    <input type="text" class="form-control" id="phone"
-                                        placeholder="Téléphone" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="mgs">Le message</label>
-                                    <textarea name="message" id="mgs" rows="4" class="form-control"></textarea>
-                                </div>
-
-                                <button type="submit" class="btn btn-primary">
-                                    ENVOYER <i class="fal fa-paper-plane"></i>
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--Contact Form End-->
-        <section class="maps">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.575103414676!2d3.082630114776834!3d36.708746980543005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fadae211261fd%3A0x75db15dec911d09d!2sORCLOUD!5e0!3m2!1sen!2sdz!4v1588694669113!5m2!1sen!2sdz"
-                width="100%" height="350" frameborder="0" style="border: 0;" allowfullscreen=""
-                aria-hidden="false" tabindex="0"></iframe>
-        </section>
+        <!--CTA END-->
     </main>
 
     <footer class="footer">
